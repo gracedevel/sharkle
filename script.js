@@ -14,8 +14,8 @@ const allWords = Array.from(new Set([...targetWords, ...dictionary]));
 const WORD_LENGTH = targetWord.length
 
 createDivs(WORD_LENGTH*(WORD_LENGTH+1))
-document.getElementById("guess-grid").style.setProperty('grid-template-columns', 'repeat(WORD_LENGTH + 1, 2em)');
-document.getElementById("guess-grid").style.setProperty('grid-template-rows', 'repeat(WORD_LENGTH, 2em)');
+document.getElementById("guess-grid").style.setProperty('grid-template-columns', 'repeat(WORD_LENGTH, 2em)');
+document.getElementById("guess-grid").style.setProperty('grid-template-rows', 'repeat(WORD_LENGTH + 1, 2em)');
 startInteraction()
 
 function createDivs(numberOfDivs) {
