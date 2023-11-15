@@ -20,7 +20,9 @@ startInteraction()
 
 function createDivs(numberOfDivs) {
  var parentElement = document.getElementById('data-guess-grid');
-
+ while (parentElement.firstChild) {
+    parentElement.removeChild(parentElement.lastChild);
+  }
  for (var i = 0; i < numberOfDivs; i++) {
     var newDiv = document.createElement('div');
     newDiv.className = "tile";
